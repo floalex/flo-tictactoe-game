@@ -8,7 +8,7 @@ class Board
   end
   
   def draw
-    system "clear"
+    system 'clear'
     puts
     puts "    |     |"
     puts "  #{@data[1]} |  #{@data[2]}  |  #{@data[3]} "
@@ -90,7 +90,7 @@ class Game
   def current_player_marks_square
     if @current_player == @human
       begin
-        puts = "Choose a position #{@board.empty_positions} to place a piece:"
+        puts "Choose a position #{@board.empty_positions} to place a piece:"
         position = gets.chomp.to_i
       end until @board.empty_positions.include?(position)
     else
