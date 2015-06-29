@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 # 1. Come up with requirements/sepcifictions, which will determine the scope.
 # 2. Application logic: requence of steps
 # 3. Translation of those steps into code
@@ -83,7 +83,7 @@ end
 
 def check_winner(board)
   
-  winning_lines.each do |line|
+  WINNING_LINES.each do |line|
     return 'Player' if board.values_at(*line).count('X') == 3
     return 'Computer' if board.values_at(*line).count('O') == 3
   end
